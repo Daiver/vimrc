@@ -16,8 +16,10 @@ colorscheme wombat256mod
  NeoBundle 'wting/rust.vim' "rust hightlight
  NeoBundle 'derekwyatt/vim-scala' "scala hightlight
  NeoBundle 'scrooloose/nerdcommenter' "commenting
+ NeoBundle 'scrooloose/nerdtree' "file browse
  NeoBundle 'spf13/vim-autoclose' "Autoclose Brackets  
  NeoBundle 'eagletmt/neco-ghc' " GHC autocomplete
+ NeoBundle 'majutsushi/tagbar'             " Class/module browser
 
  " Recommended to install
  NeoBundle 'Shougo/vimproc', {'build' : {'unix' : 'make -f make_unix.mak'}}
@@ -61,6 +63,12 @@ colorscheme wombat256mod
  "Колоночка, чтобы показывать плюсики для скрытия блоков кода:
  set foldcolumn=1
  "
+ "
+ nmap <F8> :TagbarToggle<CR> " for tagbar 
+ map <C-n> :NERDTreeToggle<CR>
+ 
+ set smartcase
+
  ""Переносим на другую строчку, разрываем строки
  set wrap
  set linebreak
